@@ -37,6 +37,7 @@ function disconnect() {
 
 function sendName() {
 	var content = $("#content").val();
+	if(content=="") return false;
 	$("#content").val("");
     stompClient.send("/app/hello/"+topic, {}, 
 		JSON.stringify({'name': $("#name").val(), 'content': content } )
