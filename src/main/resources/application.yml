@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driverClassName: org.mariadb.jdbc.Driver 
+    url: jdbc:mariadb://www.jaemoon.site:3306/sample?characterEncoding=UTF-8&serverTimezone=UTC
+    username: sample
+    password: sample
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
