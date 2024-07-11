@@ -19,6 +19,16 @@ public class GreetingController {
 		return new Greeting("Hello, " + HtmlUtils.htmlEscape(message.getName()) + "!");
 	}
 	
+	
+	@MessageMapping("/enter/{tid}")
+	@SendTo("/topic/greetings/{tid}")
+	public Greeting join(HelloMessage message) throws Exception {
+		Thread.sleep(100); // simulated delay
+		
+		message.setContent(message.getName()+ "¥‘¿Ã ¿‘¿Â«œºÃΩ¿¥œ¥Ÿ.");
+		return new Greeting(message);
+	}
+	
 	@MessageMapping("/hello/{tid}")
 	@SendTo("/topic/greetings/{tid}")
 	public Greeting topic(HelloMessage message) throws Exception {

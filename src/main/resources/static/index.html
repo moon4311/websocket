@@ -1,6 +1,10 @@
-<!DOCTYPE html>
+<!-- encoding UTF-8 -->
+
+<!DOCTYPE html >
 <html>
 <head>
+	<meta charset="UTF-8">
+	
     <title>Hello WebSocket</title>
     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/main.css" rel="stylesheet">
@@ -24,15 +28,15 @@
 	        <div class="col-md-3">
 	              <div class="form-group">
 	                 <label for="connect">channel</label>
-	                 <input type="text" name="topic" class="form-control" id="topic" value="no1">
+	                 <input type="text" name="topic" class="form-control" id="topic" value="3층">
 	             </div>
 	         </div>
 	        </div>
 	        <div class="row">
 	         <div class="col-md-12">
 	         	<div class="form-group">
-	             <button id="connect" class="btn btn-default" type="submit">Connect</button>
-                 <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect</button>
+	             <button id="connect" class="btn btn-default" type="submit">연결</button>
+                 <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">종료</button>
                </div>
 	        </div>
      </div>
@@ -50,7 +54,9 @@
             <table id="conversation" class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Greetings</th>
+                    <th>Greetings
+                    	<label id="userCount"></label>
+                    </th>
                 </tr>
                 </thead>
                 <tbody id="greetings">

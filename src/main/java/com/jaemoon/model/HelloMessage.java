@@ -11,6 +11,9 @@ import lombok.Setter;
 @Setter
 public class HelloMessage {
 
+	private String type;
+	// type : userCnt, enter, exit, message
+	
 	private String name, content;
 	
 	private Date time = new Date();
